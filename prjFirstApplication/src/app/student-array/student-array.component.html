@@ -1,0 +1,33 @@
+<p>student-array works!</p>
+<div class="panel panel default">
+<div class ="panel-heading"> 
+    <table class="table">
+         <tr>
+           <th>Name</th>
+           <th>id</th>
+           <th>Iscleared</th>
+           <th>image</th>
+       </tr>
+    </table>
+    </div>
+</div>
+
+  <div class = "panel panel-default">
+    <tbody *ngFor="let stu of student">
+        <table class = "table">
+        <tr>
+            <td>{{stu.name}}</td>  
+             <th>{{stu.id}}</th>             
+             <td>{{stu.Iscleared}}</td> 
+             <td><img src={{stu.Image}} ></td>          
+        </tr>   
+    </table>
+    </tbody>
+</div>
+
+<hr>
+<h2>NG IF</h2>
+<h3>Display students who cleared 1st semister</h3>
+<div *ngFor="let s of student">
+    <li *ngIf="s.Iscleared===true">{{s.name}}  {{s.id}}  {{s.image}}</li>
+</div>

@@ -1,0 +1,35 @@
+<p>employee-array works!</p>
+<table class="table table-border table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Department</th>
+        </tr>
+    </thead>
+
+<tbody *ngFor="let emp of People">
+    <tr>
+        <td>{{emp.name}}</td>
+        <td>{{emp.age}}</td>
+        <td>{{emp.dept}}</td>
+    </tr>
+</tbody>
+</table>
+<hr>
+<h2>NG IF</h2>
+<h3> Display the Employee Age>23</h3>
+<div *ngFor="let e of People">
+    <li *ngIf="e.age>23 && e.dept==='Hr'">{{e.name}}  {{e.age}}</li>
+    <li>{{e.dept}}</li>
+</div>
+<br>
+
+<div class="det" *ngFor="let e of People">
+   <div>  *ngIf="e.age>23 && e.dept==='Hr'">
+        <li> {{e.name}} {{e.age}}</li>
+      <li> {{e.dept}}</li>li>
+
+
+    </div>
+</div>
